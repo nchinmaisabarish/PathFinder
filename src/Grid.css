@@ -1,0 +1,70 @@
+.grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  position: relative; /* Ensure position context for overlay */
+  width: 40px;
+  height: 40px;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cell.wall {
+  background-color: black; /* Walls are black */
+  color: white; /* Text color for walls */
+}
+
+.cell.start {
+  background-color: blue; /* Start tile color */
+  color: white; /* Text color for start tile */
+}
+
+.cell.finish {
+  background-color: red; /* Finish tile color */
+  color: white; /* Text color for finish tile */
+}
+
+.cell.exploring {
+  background-color: yellow; /* Exploring cells color */
+  color: black; /* Text color for exploring cells */
+}
+
+.cell.path {
+  background-color: green; /* Path color */
+  color: black; /* Text color for path cells */
+}
+
+.wall-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: orange; /* Color for walls in the final path */
+  opacity: 0.5; /* Adjust opacity as needed */
+}
+
+.message {
+  color: red;
+  margin-top: 10px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+.cell.visited {
+  background-color: #f0f0f02f; /* Light grey color for visited cells */
+}

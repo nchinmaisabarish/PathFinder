@@ -1,38 +1,85 @@
 .App {
+  max-width: 1000px; /* Set a maximum width to constrain content */
+  margin: 0 auto; /* Center align content horizontally */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.layout-table {
+  width: 100%;
+  border-collapse: collapse; /* Ensure cells are joined together */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input-column {
+  width: 30%; /* Adjust width of the input column as needed */
+  vertical-align: top; /* Align content to the top of the cell */
+  padding-right: 20px; /* Add spacing between columns */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-container {
+  margin-bottom: 10px;
+}
+
+.input-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.button-container {
+  margin-bottom: 10px;
+}
+
+.start-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.tile-buttons {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 10px;
+}
+
+.tile-buttons button {
+  background-color: #6c757d;
   color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.tile-buttons button.active {
+  background-color: #28a745; /* Green color for active state */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tile-buttons button:hover {
+  background-color: #5a6268;
+}
+
+.grid-column {
+  width: 70%; /* Adjust width of the grid column as needed */
+  vertical-align: top; /* Align content to the top of the cell */
+}
+
+.grid-container {
+  width: 100%;
+  max-width: 800px; /* Limit width of grid container */
+  display: flex;
+  justify-content: center; /* Center align grid */
 }
